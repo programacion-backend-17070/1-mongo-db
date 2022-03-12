@@ -15,8 +15,9 @@ class Product {
     this.model = mongoose.model("product", schema)
   }
 
-  getAll() {
-
+  async getAll() {
+    const products = await this.model.find()
+    return products
   }
 
   getById() {

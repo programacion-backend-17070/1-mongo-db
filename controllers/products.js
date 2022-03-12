@@ -1,7 +1,15 @@
 const productModel = require("../models/product")
 
 module.exports = {
-  get: (req, res) => res.send("OK"),
+  get: async (req, res) => {
+    try {
+      const data = await productModel.getAll()
+      res.send(data)
+    } catch (e) {
+      console.log(e)
+      res.status(500).send(e)
+    }
+  },
   getById: (req, res) => res.send("OK"),
   put: (req, res) => res.send("OK"),
   post: async (req, res) => {
