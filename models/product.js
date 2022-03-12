@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 class Product {
   constructor() {
-    schema = new mongoose.Schema({
+    const schema = new mongoose.Schema({
       nombre: String,
       descripcion: String,
       codigo: String,
@@ -29,6 +29,8 @@ class Product {
 
   async create(obj) {
     const product = await this.model.create(obj)
+    console.log("----------------------------")
+    console.log("Mongo: ")
     console.log(JSON.stringify(product, null, 2))
   }
 
@@ -36,3 +38,5 @@ class Product {
 
   }
 }
+
+module.exports = new Product()
