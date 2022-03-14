@@ -1,4 +1,4 @@
-const isAdmin = false
+const isAdmin = true
 
 module.exports = (req, res, next) => {
   if (isAdmin) {
