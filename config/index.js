@@ -1,8 +1,10 @@
 module.exports = {
-  hostname: "cluster0.go6w7.mongodb.net",
-  schema: "mongodb+srv",
-  user: "lalomx",
-  password: "",
-  database: "ecommerce",
-  options: "retryWrites=true&w=majority"
+  HOSTNAME: "cluster0.go6w7.mongodb.net",
+  SCHEMA: "mongodb+srv",
+  USER: "lalomx",
+  PASSWORD: "e6eHSeLG6ahKauxy",
+  DATABASE: "ecommerce",
+  OPTIONS: "retryWrites=true&w=majority"
 }
+
+//http://localhost:port
