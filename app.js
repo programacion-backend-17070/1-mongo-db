@@ -12,7 +12,8 @@ const PORT = process.env.PORT || 8080
 
 // ${SCHEMA}://{HOSTNAME}:${PORT}/${DATABASE} -> LOCAL mongodb://localhost:27017/ecommerce
 // ${SCHEMA}://${USER}:${PASSWORD}@${HOSTNAME}/${DATABASE}?${OPTIONS} -> CLOUD
-mongoose.connect(`${SCHEMA}://${USER}:${PASSWORD}@${HOSTNAME}/${DATABASE}?${OPTIONS}`).then(() => {
+// mongodb+srv://lalomx:e6eHSeLG6ahKauxy@cluster0.go6w7.mongodb.net/ecommerce?retryWrites=true&w=majority
+mongoose.connect(`mongodb+srv://lalomx:e6eHSeLG6ahKauxy@cluster0.go6w7.mongodb.net/ecommerce?retryWrites=true&w=majority`).then(() => {
   // middleware del body
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
